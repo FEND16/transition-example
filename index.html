@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Au</title>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<!-- Checkbox is hidden and the label is used instead of the checkbox
+	so we can style it however we want -->
+	<input type="checkbox" id="nav-burger" class="nav-burger">
+	<!-- The hamburger icon is made out of svg paths, can alse be made
+	by divs or unicode-text, see comments in readme for more details -->
+	<label for="nav-burger">
+		<svg height="32px" viewBox="0 0 32 32" width="32px" >
+			<path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+		</svg>
+	</label>
+	<!-- Mobile navigation that is hidden to the left -->
+	<nav class="nav">
+		<a href="#" class="nav-item-primary">Home</a>
+		<a href="#" class="nav-item-primary">About</a>
+		<a href="#" class="nav-item-primary">Contact</a>	
+	</nav>
+	<!-- Desktop navigation that is hidden upwards when we are in mobile mode -->
+	<header class="header primary-header">
+		<nav class="header-nav">
+			<a href="#" class="nav-item-primary">Home</a>
+			<a href="#" class="nav-item-primary">Contact</a>
+			<a href="#" class="nav-item-primary">About</a>		
+		</nav>
+	</header>
+	<main class="wrapper wrapper-content">
+		<header class="box logo">
+			<article class="box-article logo">
+				<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 800 800"><defs><style>.cls-1{fill:gold;}.cls-2{fill:#f2c300;}.cls-3{fill:#3a3a3a;}.cls-4{fill:#262626;}</style><symbol id="oro_logo" data-name="oro_logo" viewBox="0 0 800 800"><g id="Background"><rect class="cls-1" x="192.5" y="158.49" width="417" height="480"/></g><path id="Gold_hex" data-name="Gold hex" class="cls-2" d="M746.41,200,400,0,53.59,200V600L400,800,746.41,600ZM400,684.53,153.59,542.26V257.74L400,115.47,646.41,257.73V542.27Z"/><path id="inner_hex" data-name="inner hex" class="cls-3" d="M693.54,229.6l-292.67-169L108.2,229.6V567.54l292.67,169,292.67-169ZM400.87,639,192.69,518.76V278.37L400.87,158.18,609.05,278.37V518.76Z"/><polygon id="Shadow" class="cls-2" points="400.5 638.49 192.5 518.49 192.5 278.49 400.5 398.49 400.5 638.49"/><polygon class="cls-4" points="192.5 278.49 108.5 229.49 108.5 567.49 192.5 518.49 192.5 278.49"/><polygon class="cls-4" points="609.5 278.49 693.5 229.49 693.5 567.49 609.5 518.49 609.5 278.49"/><polygon class="cls-4" points="400.5 60.49 108.5 229.49 192.5 278.49 400.5 158.49 400.5 60.49"/><polygon class="cls-4" points="400.5 60.49 692.5 229.49 608.5 278.49 400.5 158.49 400.5 60.49"/></symbol></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Logo_Standard" data-name="Logo Standard"><use width="800" height="800" xlink:href="#oro_logo"/></g></g>
+				</svg>
+
+			</article>
+		</div>
+		<div class="box">
+			<article class="box-article">
+				<h1 class="header-center">AU</h1>
+				<p>Au är Sveriges främsta e-sportswebbyrå. Vi specialiserar oss på att nå ut till en ung publik och skapa hemsidor som hjälper både e-sportslag samt e-sportsevenemang att växa.</p>
+			</article>
+		</div>
+		<div class="box parallax">
+			<article class="box-article article-single">
+				<h3 class="header-center">Dreamhack App 2016</h3>
+					<p>Vi skapade den ultimata appen för att följa det ultimata e-sportseventet. Tillsammans med Dreamhack utformade vi en app som var informativ och innovativ.</p>
+			</article>
+		</div>
+		<div class="box">
+			<article class="box-article article-single">
+				<h1 class="header-center">Back story</h1>
+					<p>Au startade en ljummen sensommarnatt i Grums den 19 augusti. Dataspel låg i luften och tillfället var perfekt, här skulle startas webbyrå och tjäna stora sedlar. Lokala LAN blev till lokala turneringar och sedan till internationella tävlingar på hög nivå. Någon behövde marknadsföra alla nykomlingar, det uppdraget tog Au på sig och gjorde det med bravur.</p>
+				</article>
+			</div>
+		</main>
+	</body>
+	</html>

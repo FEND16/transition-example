@@ -1,0 +1,246 @@
+/* Import form partials , the responsive partial is at the bottom */
+
+@import "mixins";
+@import "reset";
+
+
+/* My main colors for this project */
+
+$gold: #FFD602;
+$dark-gold: #F2C300;
+$primary-dark: #3A3A3A;
+$primary-light: #fff;
+
+body{
+	font: 100%/1.5 "Source Sans Pro", serif;
+}
+
+/* Defaults */
+
+p{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 2rem 0;
+	letter-spacing: 0.05rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 2rem 0;
+	font-family: "Alegreya";
+}
+
+h1{
+	font-size: 5rem;
+	color: $dark-gold;
+}
+h2{
+	font-size: 4rem;
+}
+h3{
+	font-size: 3rem;	
+}
+h4{
+	font-size: 2rem;
+}
+
+a{
+	text-decoration: none;
+}
+svg{
+	max-width:100%;
+}
+
+/**
+ * Components
+ */
+
+
+/* Header Desktop Navigation */
+
+.header{
+	@include flex-center;
+
+	/* Position the element off screen with translate. */
+
+	transform: translate(0, -5rem);
+	width: 100%;
+	height: 5rem;
+	/* We are saying that when the transform property changes, it will do
+	so under a duration of 300ms and with easing, the transition will be
+	activated when the transform property changes. In this case: when we
+	resize the window */
+	transition: transform 300ms ease;
+	a{
+		color: #fff;
+	}
+}
+
+.primary-header{
+	background-color: $primary-dark;
+	color: #fff;
+}
+
+/* Mobile Navigation */
+
+.nav{
+	position: fixed;
+	top: 0;
+	left: -250px;
+	height: 100%;
+	width: 250px;
+	padding: 2rem 1rem;
+	background-color: $gold;
+	display: flex; 
+	flex-direction: column;
+
+	/* z-index determines which element should be on top, the higher the value
+	the closer the element is to the user, stacked.*/
+	z-index: 1;
+
+	/* We are saying that when the transform property changes, it will do
+	so under a duration of 300ms and with easing */
+
+	transition: transform 300ms ease;
+
+	/* will-change is a new property that tells the browser that 
+	this property will change, allowing the browser to handle
+	the animation better */
+
+	will-change: transform;
+	a{
+		color: $primary-dark;
+	}
+}
+
+/* Hiding the checkbox */
+.nav-burger{
+	display:none;
+	
+}
+
+/* Positioning the label for the checkbox */
+
+.nav-burger ~ label{
+	position: fixed;
+	top: 20px;
+	left: 10px;
+	width: 2rem;
+	height: 2rem;
+
+	/* z-index determines which element should be on top, the higher the value
+	the closer the element is to the user, stacked.*/
+	z-index: 2;
+
+	/* We are saying that when the transform property changes, it will do
+	so under a duration of 300ms and with easing */
+
+	transition: transform 300ms ease;
+
+	/* will-change is a new property that tells the browser that 
+	this property will change, allowing the browser to handle
+	the animation better */
+
+	will-change: transform;
+	/* sass nesting: choose the svg inside of the label and fill it with 
+	a color. Don't use 'background' or 'border' on svg elements */
+	svg{
+		fill: $gold;
+	}
+}
+
+/* When the checkbox is checked, translate both the checkbox
+and the navigation hidden. Move it (translate) the full width of the
+navigation (fully visible) */
+
+
+.nav-burger:checked + label{
+	transform: translate(180px, 0);
+	svg{
+		fill: white; /* and change the fill of the burger*/
+	}
+	/* sass nesting, the same as writing .nav-burger:checked ~ .nav{} */
+	~.nav {
+	transform: translate(250px, 0);
+	}
+}
+
+.nav-item-primary{
+	text-transform: uppercase;
+	margin: 1rem;
+	font-size: 1.5rem;
+	color: #333;
+	border-bottom: 5px solid #fff;
+	transition: all 300ms ease;
+	&:hover{
+		border-bottom: 5px solid #333;
+	}
+}
+
+
+/* Main content */
+.wrapper-content{
+	background: #fff;
+	margin: 5rem 0;
+}
+
+/* Article */
+
+.box{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.box-article{
+	flex: 1;
+	padding: 0 2rem;
+}
+
+.header-center{
+	text-align: center;
+}
+
+/* Fixed background scroll */ 
+
+.parallax{
+	background-image: url("../images/dreamhack_big.jpg");
+	background-position: center center;
+	background-attachment: fixed;
+	background-color: darken($dark-gold, 30%);
+	background-blend-mode: multiply;
+	height: 400px;
+	text-align:center;
+	color: $primary-light;
+	h3{
+		color: $primary-light;
+	}
+}
+
+.logo{
+	@include flex-center;
+}
+
+@import "responsive";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

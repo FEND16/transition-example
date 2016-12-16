@@ -1,0 +1,43 @@
+
+
+
+
+$animals: cat dog llama;
+
+@mixin text-color($color){
+	@if $color == white{
+		background: black;
+	}@else{
+		background: white;
+	}
+}
+
+$colors: (
+	red,
+	green,
+	yellow,
+	blue
+);
+
+@for $i from 1 through length($colors) {
+  .item#{$i} {
+  	display: inline-block;
+  	height: 100px;
+  	width: 100px;
+    background-color: nth($colors, $i);
+  }
+}
+
+$colors:(
+  "red":  "#ff0000",
+  "green": "#00ff00",
+  "blue": "#0000ff"
+);
+
+
+.grej{
+	width: 200px;
+	height: 200px;
+	background-color: transparentize(green, 0.7);
+	@include weird-borders(green);
+}
